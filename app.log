@@ -1,0 +1,428 @@
+2025-04-04 12:45:38,402 - __main__ - INFO - Starting AI Music Video Generator
+2025-04-04 12:45:39,517 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 12:45:39,794 - agents.song_poller - ERROR - Error querying pending songs: {'code': 'PGRST100', 'details': 'unexpected "o" expecting null or trilean value (unknown, true, false)', 'hint': None, 'message': '"failed to parse filter (is.None)" (line 1, column 5)'}
+2025-04-04 12:45:39,802 - utils.error_handling - WARNING - Attempt 1 failed for get_pending_songs: {'code': 'PGRST100', 'details': 'unexpected "o" expecting null or trilean value (unknown, true, false)', 'hint': None, 'message': '"failed to parse filter (is.None)" (line 1, column 5)'}. Retrying in 2.00 seconds...
+2025-04-04 12:45:41,854 - agents.song_poller - ERROR - Error querying pending songs: {'code': 'PGRST100', 'details': 'unexpected "o" expecting null or trilean value (unknown, true, false)', 'hint': None, 'message': '"failed to parse filter (is.None)" (line 1, column 5)'}
+2025-04-04 12:45:41,873 - utils.error_handling - WARNING - Attempt 2 failed for get_pending_songs: {'code': 'PGRST100', 'details': 'unexpected "o" expecting null or trilean value (unknown, true, false)', 'hint': None, 'message': '"failed to parse filter (is.None)" (line 1, column 5)'}. Retrying in 4.00 seconds...
+2025-04-04 12:45:45,961 - agents.song_poller - ERROR - Error querying pending songs: {'code': 'PGRST100', 'details': 'unexpected "o" expecting null or trilean value (unknown, true, false)', 'hint': None, 'message': '"failed to parse filter (is.None)" (line 1, column 5)'}
+2025-04-04 12:45:45,969 - utils.error_handling - ERROR - All 3 retry attempts failed for get_pending_songs
+2025-04-04 12:45:45,972 - __main__ - ERROR - Error in main loop: {'code': 'PGRST100', 'details': 'unexpected "o" expecting null or trilean value (unknown, true, false)', 'hint': None, 'message': '"failed to parse filter (is.None)" (line 1, column 5)'}
+2025-04-04 14:07:28,284 - __main__ - INFO - Starting AI Music Video Generator
+2025-04-04 14:07:29,371 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 14:07:29,518 - agents.song_poller - ERROR - Error querying pending songs: {'code': '42703', 'details': None, 'hint': None, 'message': 'column songs.artist does not exist'}
+2025-04-04 14:07:29,519 - utils.error_handling - WARNING - Attempt 1 failed for get_pending_songs: {'code': '42703', 'details': None, 'hint': None, 'message': 'column songs.artist does not exist'}. Retrying in 2.00 seconds...
+2025-04-04 14:07:31,563 - agents.song_poller - ERROR - Error querying pending songs: {'code': '42703', 'details': None, 'hint': None, 'message': 'column songs.artist does not exist'}
+2025-04-04 14:07:31,564 - utils.error_handling - WARNING - Attempt 2 failed for get_pending_songs: {'code': '42703', 'details': None, 'hint': None, 'message': 'column songs.artist does not exist'}. Retrying in 4.00 seconds...
+2025-04-04 14:07:35,655 - agents.song_poller - ERROR - Error querying pending songs: {'code': '42703', 'details': None, 'hint': None, 'message': 'column songs.artist does not exist'}
+2025-04-04 14:07:35,656 - utils.error_handling - ERROR - All 3 retry attempts failed for get_pending_songs
+2025-04-04 14:07:35,658 - __main__ - ERROR - Error in main loop: {'code': '42703', 'details': None, 'hint': None, 'message': 'column songs.artist does not exist'}
+2025-04-04 14:19:35,405 - __main__ - INFO - Starting AI Music Video Generator
+2025-04-04 14:19:36,494 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 14:19:36,813 - agents.song_poller - ERROR - Error querying pending songs: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "songs.negative_tags".', 'message': 'column songs.negative_text does not exist'}
+2025-04-04 14:19:36,819 - utils.error_handling - WARNING - Attempt 1 failed for get_pending_songs: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "songs.negative_tags".', 'message': 'column songs.negative_text does not exist'}. Retrying in 2.00 seconds...
+2025-04-04 14:19:38,869 - agents.song_poller - ERROR - Error querying pending songs: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "songs.negative_tags".', 'message': 'column songs.negative_text does not exist'}
+2025-04-04 14:19:38,875 - utils.error_handling - WARNING - Attempt 2 failed for get_pending_songs: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "songs.negative_tags".', 'message': 'column songs.negative_text does not exist'}. Retrying in 4.00 seconds...
+2025-04-04 14:19:42,960 - agents.song_poller - ERROR - Error querying pending songs: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "songs.negative_tags".', 'message': 'column songs.negative_text does not exist'}
+2025-04-04 14:19:42,971 - utils.error_handling - ERROR - All 3 retry attempts failed for get_pending_songs
+2025-04-04 14:19:42,974 - __main__ - ERROR - Error in main loop: {'code': '42703', 'details': None, 'hint': 'Perhaps you meant to reference the column "songs.negative_tags".', 'message': 'column songs.negative_text does not exist'}
+2025-04-04 14:21:13,473 - __main__ - INFO - Starting AI Music Video Generator
+2025-04-04 14:21:14,548 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 14:21:14,757 - agents.song_poller - INFO - Found 3 songs pending video generation
+2025-04-04 14:21:14,759 - __main__ - INFO - Found 3 songs to process
+2025-04-04 14:21:14,762 - __main__ - INFO - Processing song: Neon Dreams by Yona
+2025-04-04 14:21:16,996 - agents.song_poller - INFO - Created processing record c1f31018-18ab-43f4-bbef-5178f837e822 for song 67e9fb55-7696-4340-b9c0-6e999dc66062
+2025-04-04 14:21:17,004 - __main__ - ERROR - Error processing song 67e9fb55-7696-4340-b9c0-6e999dc66062: 'str' object does not support item assignment
+2025-04-04 14:21:17,058 - agents.song_poller - INFO - Updated processing record c1f31018-18ab-43f4-bbef-5178f837e822 status to failed
+2025-04-04 14:21:17,063 - __main__ - INFO - Processing song: Neon Dreams by Yona
+2025-04-04 14:21:19,706 - agents.song_poller - INFO - Created processing record 585e54b2-a789-4ad0-9b87-f75ac4de3f90 for song 835ff4fe-97c3-492f-ab7e-abf60685bdf4
+2025-04-04 14:21:19,713 - __main__ - ERROR - Error processing song 835ff4fe-97c3-492f-ab7e-abf60685bdf4: 'str' object does not support item assignment
+2025-04-04 14:21:19,770 - agents.song_poller - INFO - Updated processing record 585e54b2-a789-4ad0-9b87-f75ac4de3f90 status to failed
+2025-04-04 14:21:19,776 - __main__ - INFO - Processing song: Inspired by https://sonoteller.com/manual_input by Yona
+2025-04-04 14:21:22,034 - agents.song_poller - INFO - Created processing record 38a90137-7f86-4767-bcce-22304c32d022 for song 8a6a9da9-388e-4c10-a792-86e369a98eca
+2025-04-04 14:21:22,209 - agents.song_poller - INFO - Updated processing record 38a90137-7f86-4767-bcce-22304c32d022 status to processing
+2025-04-04 14:21:22,218 - agents.script_generator - INFO - Generating script for song: Inspired by https://sonoteller.com/manual_input by Yona
+2025-04-04 14:21:33,733 - openai._base_client - INFO - Retrying request to /chat/completions in 0.915226 seconds
+2025-04-04 14:22:02,387 - agents.script_generator - INFO - Script generated with 8 scenes
+2025-04-04 14:22:02,568 - agents.song_poller - INFO - Updated processing record 38a90137-7f86-4767-bcce-22304c32d022 status to processing
+2025-04-04 14:22:02,578 - agents.video_gen - INFO - Generating 8 video clips
+2025-04-04 14:22:02,590 - agents.video_gen - INFO - Generating clip 1/8
+2025-04-04 14:22:02,600 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:22:02,603 - agents.video_gen - INFO - Generating Runway clip with prompt: Introduce setting...
+2025-04-04 14:22:03,001 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:22:03,004 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:22:03,006 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:22:03,008 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:22:03,392 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:22:09,561 - agents.video_gen - INFO - RunwayML task created with ID: 30cfd9e6-fa07-414e-90a0-dc6c703b56cb
+2025-04-04 14:22:19,919 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:22:30,279 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:22:30,282 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:22:30,285 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:22:30,287 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/d320d214-e963-477f-8043-4cb91779e57d.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYzQ1NjllMWJhZGJmMmY3YyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.d2XvAENhJ2PlV8sLUSFLfg7BTMAZsMo6y-vB_YD05Cs
+2025-04-04 14:22:30,290 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/d320d214-e963-477f-8043-4cb91779e57d.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYzQ1NjllMWJhZGJmMmY3YyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.d2XvAENhJ2PlV8sLUSFLfg7BTMAZsMo6y-vB_YD05Cs
+2025-04-04 14:22:30,293 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/d320d214-e963-477f-8043-4cb91779e57d.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYzQ1NjllMWJhZGJmMmY3YyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.d2XvAENhJ2PlV8sLUSFLfg7BTMAZsMo6y-vB_YD05Cs
+2025-04-04 14:22:31,780 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743772950.mp4
+2025-04-04 14:22:31,784 - agents.video_gen - INFO - Successfully generated clip 1
+2025-04-04 14:22:31,785 - agents.video_gen - INFO - Generating clip 2/8
+2025-04-04 14:22:31,786 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:22:31,788 - agents.video_gen - INFO - Generating Runway clip with prompt: Introduce singer...
+2025-04-04 14:22:32,153 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:22:32,155 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:22:32,158 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:22:32,160 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:22:32,540 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:22:40,003 - agents.video_gen - INFO - RunwayML task created with ID: b8900a80-7d48-48c5-8f0c-fcce0cbccfbb
+2025-04-04 14:22:50,365 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:23:00,722 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:23:11,093 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:23:11,095 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:23:11,098 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:23:11,100 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/9f882733-e63e-4c72-b1b7-8cb98bb2644d.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjE1NWNlZDRkMzYwZWZkMiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.72JuP5ZlPVyGBmdvi_-dTtuDWMdg41-sMOP7rxCmY4c
+2025-04-04 14:23:11,102 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/9f882733-e63e-4c72-b1b7-8cb98bb2644d.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjE1NWNlZDRkMzYwZWZkMiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.72JuP5ZlPVyGBmdvi_-dTtuDWMdg41-sMOP7rxCmY4c
+2025-04-04 14:23:11,105 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/9f882733-e63e-4c72-b1b7-8cb98bb2644d.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjE1NWNlZDRkMzYwZWZkMiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.72JuP5ZlPVyGBmdvi_-dTtuDWMdg41-sMOP7rxCmY4c
+2025-04-04 14:23:12,601 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743772991.mp4
+2025-04-04 14:23:12,605 - agents.video_gen - INFO - Successfully generated clip 2
+2025-04-04 14:23:12,606 - agents.video_gen - INFO - Generating clip 3/8
+2025-04-04 14:23:12,607 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:23:12,608 - agents.video_gen - INFO - Generating Runway clip with prompt: Wall animation dance...
+2025-04-04 14:23:12,964 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:23:12,966 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:23:12,969 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:23:12,970 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:23:13,353 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:23:18,715 - agents.video_gen - INFO - RunwayML task created with ID: 37d14116-0c62-4513-95a4-e586f464de7d
+2025-04-04 14:23:29,076 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:23:39,433 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:23:49,792 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:23:49,794 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:23:49,796 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:23:49,797 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/ebf2b83f-0c33-47b0-9f33-b3bd0f9ef0c9.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODAxZjRkMmRiMTRjYzMwNCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.rDp8NuG1PLp4d8BUAt8cW_8lSbQQcsjgOYrv9VERijc
+2025-04-04 14:23:49,800 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/ebf2b83f-0c33-47b0-9f33-b3bd0f9ef0c9.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODAxZjRkMmRiMTRjYzMwNCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.rDp8NuG1PLp4d8BUAt8cW_8lSbQQcsjgOYrv9VERijc
+2025-04-04 14:23:49,801 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/ebf2b83f-0c33-47b0-9f33-b3bd0f9ef0c9.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODAxZjRkMmRiMTRjYzMwNCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.rDp8NuG1PLp4d8BUAt8cW_8lSbQQcsjgOYrv9VERijc
+2025-04-04 14:23:51,222 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743773029.mp4
+2025-04-04 14:23:51,225 - agents.video_gen - INFO - Successfully generated clip 3
+2025-04-04 14:23:51,226 - agents.video_gen - INFO - Generating clip 4/8
+2025-04-04 14:23:51,228 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:23:51,229 - agents.video_gen - INFO - Generating Runway clip with prompt: Chorus with animation...
+2025-04-04 14:23:51,584 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:23:51,586 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:23:51,588 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:23:51,590 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:23:51,975 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:23:58,253 - agents.video_gen - INFO - RunwayML task created with ID: 8bdc436c-00fd-4bbb-ab6b-f6c1f42b3c2c
+2025-04-04 14:24:08,605 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:24:18,965 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:24:29,318 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:24:29,319 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:24:29,321 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:24:29,322 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/7870178e-c06a-4e30-ada5-af6fcc53a4bd.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMzBkM2Y4Y2Q3MDVhMzAxMCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.FyHC3pVelX3agXi09IF4LiYXI-J5sO6Tj4l4htTJQuM
+2025-04-04 14:24:29,325 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/7870178e-c06a-4e30-ada5-af6fcc53a4bd.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMzBkM2Y4Y2Q3MDVhMzAxMCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.FyHC3pVelX3agXi09IF4LiYXI-J5sO6Tj4l4htTJQuM
+2025-04-04 14:24:29,327 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/7870178e-c06a-4e30-ada5-af6fcc53a4bd.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMzBkM2Y4Y2Q3MDVhMzAxMCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.FyHC3pVelX3agXi09IF4LiYXI-J5sO6Tj4l4htTJQuM
+2025-04-04 14:24:30,733 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743773069.mp4
+2025-04-04 14:24:30,737 - agents.video_gen - INFO - Successfully generated clip 4
+2025-04-04 14:24:30,738 - agents.video_gen - INFO - Generating clip 5/8
+2025-04-04 14:24:30,741 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:24:30,742 - agents.video_gen - INFO - Generating Runway clip with prompt: Floor dance...
+2025-04-04 14:24:31,108 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:24:31,109 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:24:31,112 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:24:31,115 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:24:31,516 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:24:38,013 - agents.video_gen - INFO - RunwayML task created with ID: 489e05b2-be29-4331-9886-e6644633b29b
+2025-04-04 14:24:48,370 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:24:58,723 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:25:09,090 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:25:09,097 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:25:09,106 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:25:09,110 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/22eea1cf-0841-4263-b906-471bb84aa822.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODJiODc1ZTUwNWEyMGNlMCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.tlJAuhcG9kkzZWVsYlV9K9aNVaTuRsgv1HKcplZG450
+2025-04-04 14:25:09,113 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/22eea1cf-0841-4263-b906-471bb84aa822.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODJiODc1ZTUwNWEyMGNlMCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.tlJAuhcG9kkzZWVsYlV9K9aNVaTuRsgv1HKcplZG450
+2025-04-04 14:25:09,116 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/22eea1cf-0841-4263-b906-471bb84aa822.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODJiODc1ZTUwNWEyMGNlMCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.tlJAuhcG9kkzZWVsYlV9K9aNVaTuRsgv1HKcplZG450
+2025-04-04 14:25:10,427 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743773109.mp4
+2025-04-04 14:25:10,431 - agents.video_gen - INFO - Successfully generated clip 5
+2025-04-04 14:25:10,433 - agents.video_gen - INFO - Generating clip 6/8
+2025-04-04 14:25:10,435 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:25:10,437 - agents.video_gen - INFO - Generating Runway clip with prompt: Chorus again, atmosphere changes...
+2025-04-04 14:25:10,811 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:25:10,814 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:25:10,816 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:25:10,818 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:25:11,202 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:25:19,888 - agents.video_gen - INFO - RunwayML task created with ID: 966e7ff2-aea0-482d-87da-692c696954d1
+2025-04-04 14:25:30,253 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:25:40,607 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:25:40,617 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:25:40,633 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:25:40,635 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/8cfacc8c-ac21-4f46-8507-4b48f27ace36.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiOGQ3NzZiNmYzMWVhOTNlZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.GFLDnJ43dOErrBCr1RwAHYcpo983MDcBYv07FWi381A
+2025-04-04 14:25:40,641 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/8cfacc8c-ac21-4f46-8507-4b48f27ace36.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiOGQ3NzZiNmYzMWVhOTNlZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.GFLDnJ43dOErrBCr1RwAHYcpo983MDcBYv07FWi381A
+2025-04-04 14:25:40,645 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/8cfacc8c-ac21-4f46-8507-4b48f27ace36.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiOGQ3NzZiNmYzMWVhOTNlZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.GFLDnJ43dOErrBCr1RwAHYcpo983MDcBYv07FWi381A
+2025-04-04 14:25:42,098 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743773140.mp4
+2025-04-04 14:25:42,103 - agents.video_gen - INFO - Successfully generated clip 6
+2025-04-04 14:25:42,105 - agents.video_gen - INFO - Generating clip 7/8
+2025-04-04 14:25:42,107 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:25:42,109 - agents.video_gen - INFO - Generating Runway clip with prompt: Animated characters dance, cheerful environment...
+2025-04-04 14:25:42,470 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:25:42,473 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:25:42,476 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:25:42,478 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:25:42,893 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:25:50,962 - agents.video_gen - INFO - RunwayML task created with ID: da893ae1-27fa-469d-b551-e3211b6386ad
+2025-04-04 14:26:01,317 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:26:11,670 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:26:22,056 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:26:22,065 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:26:22,076 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:26:22,078 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/4a957ca8-bfc7-4b4e-80da-923b741bd326.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNGMwZTI3NjRjODdlNTg1MiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.eUkPcwNrYAITLoQlofjy8uLmRG7niWP7d6hz8AXyHj8
+2025-04-04 14:26:22,083 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/4a957ca8-bfc7-4b4e-80da-923b741bd326.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNGMwZTI3NjRjODdlNTg1MiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.eUkPcwNrYAITLoQlofjy8uLmRG7niWP7d6hz8AXyHj8
+2025-04-04 14:26:22,087 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/4a957ca8-bfc7-4b4e-80da-923b741bd326.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNGMwZTI3NjRjODdlNTg1MiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.eUkPcwNrYAITLoQlofjy8uLmRG7niWP7d6hz8AXyHj8
+2025-04-04 14:26:23,525 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743773182.mp4
+2025-04-04 14:26:23,530 - agents.video_gen - INFO - Successfully generated clip 7
+2025-04-04 14:26:23,533 - agents.video_gen - INFO - Generating clip 8/8
+2025-04-04 14:26:23,535 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 14:26:23,537 - agents.video_gen - INFO - Generating Runway clip with prompt: End scene, fade out...
+2025-04-04 14:26:23,897 - agents.video_gen - INFO - Using image URL: https://framerusercontent.com/images/0vCKfdMyMxLCjtqWJ2bUQihEwk.png?scale-down-to=512
+2025-04-04 14:26:23,900 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 14:26:23,904 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 14:26:23,908 - agents.video_gen - INFO - Downloading image...
+2025-04-04 14:26:24,285 - agents.video_gen - INFO - Converted image to data URI (length: 36407)
+2025-04-04 14:26:31,883 - agents.video_gen - INFO - RunwayML task created with ID: 26af94cc-728b-4bac-8cc5-66c0c7bf727b
+2025-04-04 14:26:52,954 - runwayml._base_client - INFO - Retrying request to /v1/tasks/26af94cc-728b-4bac-8cc5-66c0c7bf727b in 0.497917 seconds
+2025-04-04 14:26:53,831 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:27:04,210 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:27:14,572 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:27:24,940 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 14:27:35,307 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 14:27:35,309 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 14:27:35,313 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 14:27:35,316 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/fd8db92c-f23b-43ff-97a0-eb5065ea6e66.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYjk1OGUxNjU2ZjQxZGY3NyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.buxfi7qb1TSwrMPFnqZvkHB9U4fThCKvemfyjsGE1cc
+2025-04-04 14:27:35,320 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/fd8db92c-f23b-43ff-97a0-eb5065ea6e66.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYjk1OGUxNjU2ZjQxZGY3NyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.buxfi7qb1TSwrMPFnqZvkHB9U4fThCKvemfyjsGE1cc
+2025-04-04 14:27:35,324 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/fd8db92c-f23b-43ff-97a0-eb5065ea6e66.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYjk1OGUxNjU2ZjQxZGY3NyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.buxfi7qb1TSwrMPFnqZvkHB9U4fThCKvemfyjsGE1cc
+2025-04-04 14:27:36,682 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743773255.mp4
+2025-04-04 14:27:36,685 - agents.video_gen - INFO - Successfully generated clip 8
+2025-04-04 14:27:37,035 - agents.song_poller - INFO - Updated processing record 38a90137-7f86-4767-bcce-22304c32d022 status to processing
+2025-04-04 14:27:37,040 - agents.stitcher - INFO - Stitching 8 clips with audio: https://cdn1.suno.ai/4d6e0241-ee04-4cba-bb0a-db282fdd81ac.mp3
+2025-04-04 14:27:37,045 - agents.stitcher - INFO - Found 8 valid clips for stitching
+2025-04-04 14:27:40,048 - agents.stitcher - INFO - Successfully stitched video: data/final_videos/final_1743773257.mp4
+2025-04-04 14:27:40,137 - agents.song_poller - INFO - Updated processing record 38a90137-7f86-4767-bcce-22304c32d022 status to processing
+2025-04-04 14:27:40,145 - agents.uploader - INFO - Uploading video: data/final_videos/final_1743773257.mp4
+2025-04-04 14:27:40,149 - agents.uploader - INFO - Uploading to Supabase Storage: data/final_videos/final_1743773257.mp4
+2025-04-04 14:27:42,153 - agents.uploader - INFO - Video uploaded to Supabase: https://oeexwetwqsooikroobgm.supabase.co/storage/v1/object/public/videos/videos/1743773260_final_1743773257.mp4
+2025-04-04 14:27:42,253 - agents.song_poller - INFO - Updated song 8a6a9da9-388e-4c10-a792-86e369a98eca with video URL: https://oeexwetwqsooikroobgm.supabase.co/storage/v1/object/public/videos/videos/1743773260_final_1743773257.mp4
+2025-04-04 14:27:42,309 - agents.song_poller - INFO - Updated processing record 38a90137-7f86-4767-bcce-22304c32d022 status to completed
+2025-04-04 14:27:42,315 - __main__ - INFO - Successfully processed song 8a6a9da9-388e-4c10-a792-86e369a98eca
+2025-04-04 14:32:42,328 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 14:32:42,629 - agents.song_poller - INFO - Found 2 songs pending video generation
+2025-04-04 14:32:42,637 - __main__ - INFO - Found 2 songs to process
+2025-04-04 14:32:42,643 - __main__ - INFO - Processing song: Neon Dreams by Yona
+2025-04-04 14:32:44,950 - agents.song_poller - INFO - Created processing record b23da6f4-7c13-433f-a1e8-0f8a95bbf2ab for song 67e9fb55-7696-4340-b9c0-6e999dc66062
+2025-04-04 14:32:44,952 - __main__ - ERROR - Error processing song 67e9fb55-7696-4340-b9c0-6e999dc66062: 'str' object does not support item assignment
+2025-04-04 14:32:45,007 - agents.song_poller - INFO - Updated processing record b23da6f4-7c13-433f-a1e8-0f8a95bbf2ab status to failed
+2025-04-04 14:32:45,012 - __main__ - INFO - Processing song: Neon Dreams by Yona
+2025-04-04 14:32:47,307 - agents.song_poller - INFO - Created processing record 5abb33cf-e036-4c9a-b589-1e2b3b406c6b for song 835ff4fe-97c3-492f-ab7e-abf60685bdf4
+2025-04-04 14:32:47,311 - __main__ - ERROR - Error processing song 835ff4fe-97c3-492f-ab7e-abf60685bdf4: 'str' object does not support item assignment
+2025-04-04 14:32:47,352 - agents.song_poller - INFO - Updated processing record 5abb33cf-e036-4c9a-b589-1e2b3b406c6b status to failed
+2025-04-04 15:02:34,287 - __main__ - INFO - Starting AI Music Video Generator
+2025-04-04 15:02:35,380 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 15:02:35,730 - agents.song_poller - INFO - Found 0 songs pending video generation
+2025-04-04 15:02:35,732 - __main__ - INFO - No songs pending processing. Waiting...
+2025-04-04 15:30:18,820 - __main__ - INFO - Starting AI Music Video Generator
+2025-04-04 15:30:19,901 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 15:30:20,231 - agents.song_poller - INFO - Found 1 songs pending video generation
+2025-04-04 15:30:20,239 - __main__ - INFO - Found 1 songs to process
+2025-04-04 15:30:20,250 - __main__ - INFO - Processing song: Generated from https://sonoteller.com/manual_input by Yona
+2025-04-04 15:30:22,555 - agents.song_poller - INFO - Created processing record 0a177df8-d742-414a-afbb-f90b09fde787 for song fde5f05d-1d3d-48d8-a066-1605c736c078
+2025-04-04 15:30:22,708 - agents.song_poller - INFO - Updated processing record 0a177df8-d742-414a-afbb-f90b09fde787 status to processing
+2025-04-04 15:30:22,718 - agents.script_generator - INFO - Generating script for song: Generated from https://sonoteller.com/manual_input by Yona
+2025-04-04 15:30:47,129 - agents.script_generator - INFO - Script generated with 7 scenes
+2025-04-04 15:30:47,334 - agents.song_poller - INFO - Updated processing record 0a177df8-d742-414a-afbb-f90b09fde787 status to processing
+2025-04-04 15:30:47,344 - agents.video_gen - INFO - Generating 7 video clips
+2025-04-04 15:30:47,349 - agents.video_gen - INFO - Generating clip 1/7
+2025-04-04 15:30:48,831 - agents.video_gen - INFO - OpenAI selected image: The description does not match any of the available images as they all pertain to a guitar and not a vinyl record player.
+2025-04-04 15:30:48,834 - agents.video_gen - WARNING - No match found for 'The description does not match any of the available images as they all pertain to a guitar and not a vinyl record player.', using first image
+2025-04-04 15:30:48,838 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:30:48,839 - agents.video_gen - INFO - Generating Runway clip with prompt: Introduce the source of the music...
+2025-04-04 15:30:49,234 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:30:49,236 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:30:49,240 - agents.video_gen - INFO - Loading image from local file: data/images\Yona_BubbleGum_skates.jpg
+2025-04-04 15:30:49,244 - agents.video_gen - INFO - Converted local image to data URI (length: 36407)
+2025-04-04 15:30:54,349 - agents.video_gen - INFO - RunwayML task created with ID: 69d2c07d-2384-4f84-93e7-a5837735b6c2
+2025-04-04 15:31:04,718 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:31:15,059 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:31:25,421 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:31:25,431 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:31:25,445 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:31:25,450 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/b8200939-913d-4e5a-a1b3-e0d5f5b8398f.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYmExZTJiZmQ4NzM5MjEyYiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.vhyczSyxiciAjND5wsadfErym74kNwS7J7Qm73FTRu4
+2025-04-04 15:31:25,457 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/b8200939-913d-4e5a-a1b3-e0d5f5b8398f.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYmExZTJiZmQ4NzM5MjEyYiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.vhyczSyxiciAjND5wsadfErym74kNwS7J7Qm73FTRu4
+2025-04-04 15:31:25,461 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/b8200939-913d-4e5a-a1b3-e0d5f5b8398f.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYmExZTJiZmQ4NzM5MjEyYiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.vhyczSyxiciAjND5wsadfErym74kNwS7J7Qm73FTRu4
+2025-04-04 15:31:26,781 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743777085.mp4
+2025-04-04 15:31:26,786 - agents.video_gen - INFO - Successfully generated clip 1
+2025-04-04 15:31:26,788 - agents.video_gen - INFO - Generating clip 2/7
+2025-04-04 15:31:27,529 - agents.video_gen - INFO - OpenAI selected image: yona_guitar_with_crowd.png
+2025-04-04 15:31:27,539 - agents.video_gen - INFO - Using image: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:31:27,544 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:31:27,548 - agents.video_gen - INFO - Generating Runway clip with prompt: Establish setting...
+2025-04-04 15:31:27,903 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:31:27,906 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:31:27,910 - agents.video_gen - INFO - Loading image from local file: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:31:27,917 - agents.video_gen - INFO - Converted local image to data URI (length: 1556126)
+2025-04-04 15:31:35,876 - agents.video_gen - INFO - RunwayML task created with ID: c986526b-59ee-4a43-baf4-3ce6058a864a
+2025-04-04 15:31:46,234 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:32:07,293 - runwayml._base_client - INFO - Retrying request to /v1/tasks/c986526b-59ee-4a43-baf4-3ce6058a864a in 0.382658 seconds
+2025-04-04 15:32:08,058 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:32:18,421 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:32:28,786 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:32:28,789 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:32:28,793 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:32:28,796 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/64f311ad-79ac-4221-9259-8bd7d0e049ac.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjkxNzcxMzFkZmViOTQzZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.H5SW-bXBW8SvbVWmABpBksrEjTuqfD67vjeOKTuSg9Y
+2025-04-04 15:32:28,800 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/64f311ad-79ac-4221-9259-8bd7d0e049ac.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjkxNzcxMzFkZmViOTQzZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.H5SW-bXBW8SvbVWmABpBksrEjTuqfD67vjeOKTuSg9Y
+2025-04-04 15:32:28,805 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/64f311ad-79ac-4221-9259-8bd7d0e049ac.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjkxNzcxMzFkZmViOTQzZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.H5SW-bXBW8SvbVWmABpBksrEjTuqfD67vjeOKTuSg9Y
+2025-04-04 15:32:39,886 - agents.video_gen - ERROR - Error generating video with RunwayML: HTTPSConnectionPool(host='dnznrvs05pmza.cloudfront.net', port=443): Max retries exceeded with url: /64f311ad-79ac-4221-9259-8bd7d0e049ac.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjkxNzcxMzFkZmViOTQzZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.H5SW-bXBW8SvbVWmABpBksrEjTuqfD67vjeOKTuSg9Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000239A7389310>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-04-04 15:32:39,893 - agents.video_gen - ERROR - Error generating video clip: Error generating video with RunwayML: HTTPSConnectionPool(host='dnznrvs05pmza.cloudfront.net', port=443): Max retries exceeded with url: /64f311ad-79ac-4221-9259-8bd7d0e049ac.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjkxNzcxMzFkZmViOTQzZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.H5SW-bXBW8SvbVWmABpBksrEjTuqfD67vjeOKTuSg9Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000239A7389310>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-04-04 15:32:39,904 - utils.error_handling - WARNING - Attempt 1 failed for generate_clip: Error generating video clip: Error generating video with RunwayML: HTTPSConnectionPool(host='dnznrvs05pmza.cloudfront.net', port=443): Max retries exceeded with url: /64f311ad-79ac-4221-9259-8bd7d0e049ac.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNjkxNzcxMzFkZmViOTQzZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.H5SW-bXBW8SvbVWmABpBksrEjTuqfD67vjeOKTuSg9Y (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000239A7389310>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). Retrying in 5.00 seconds...
+2025-04-04 15:32:44,917 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:32:44,923 - agents.video_gen - INFO - Generating Runway clip with prompt: Establish setting...
+2025-04-04 15:32:45,284 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:32:45,364 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:32:45,371 - agents.video_gen - INFO - Loading image from local file: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:32:45,381 - agents.video_gen - INFO - Converted local image to data URI (length: 1556126)
+2025-04-04 15:32:54,777 - agents.video_gen - INFO - RunwayML task created with ID: 3dd93eaf-4725-4064-a745-e2949ca3357e
+2025-04-04 15:33:05,116 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:33:15,483 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:33:25,857 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:33:25,865 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:33:25,868 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:33:25,869 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/f0cf31bd-2de9-44d8-b694-02f33f13c740.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjQ2YWY0ZTg0YjFlY2Q0NCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.lYTfoFUQSi3zSUuLasWCL1m0WJ2db8FnyISndJ0AVZA
+2025-04-04 15:33:25,874 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/f0cf31bd-2de9-44d8-b694-02f33f13c740.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjQ2YWY0ZTg0YjFlY2Q0NCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.lYTfoFUQSi3zSUuLasWCL1m0WJ2db8FnyISndJ0AVZA
+2025-04-04 15:33:25,878 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/f0cf31bd-2de9-44d8-b694-02f33f13c740.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjQ2YWY0ZTg0YjFlY2Q0NCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.lYTfoFUQSi3zSUuLasWCL1m0WJ2db8FnyISndJ0AVZA
+2025-04-04 15:33:27,651 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743777205.mp4
+2025-04-04 15:33:27,655 - agents.video_gen - INFO - Successfully generated clip 2
+2025-04-04 15:33:27,659 - agents.video_gen - INFO - Generating clip 3/7
+2025-04-04 15:33:38,724 - openai._base_client - INFO - Retrying request to /chat/completions in 0.833641 seconds
+2025-04-04 15:33:40,465 - agents.video_gen - INFO - OpenAI selected image: yona_guitar_with_crowd.png
+2025-04-04 15:33:40,469 - agents.video_gen - INFO - Using image: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:33:40,474 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:33:40,475 - agents.video_gen - INFO - Generating Runway clip with prompt: Introduce main character...
+2025-04-04 15:33:40,854 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:33:40,856 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:33:40,863 - agents.video_gen - INFO - Loading image from local file: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:33:40,872 - agents.video_gen - INFO - Converted local image to data URI (length: 1556126)
+2025-04-04 15:33:49,028 - agents.video_gen - INFO - RunwayML task created with ID: 6db880f4-899f-4d56-a464-6008862a6b02
+2025-04-04 15:33:59,373 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:34:09,737 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:34:09,740 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:34:09,746 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:34:09,750 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/928ce554-188f-4ebb-b657-6f7b034c8b41.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZDQ2NDliYjFjMjIzNmE2ZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.yO8HieE1YXBCvMhO3sIPp05mRQwx0YaguRA01UIg1f8
+2025-04-04 15:34:09,755 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/928ce554-188f-4ebb-b657-6f7b034c8b41.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZDQ2NDliYjFjMjIzNmE2ZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.yO8HieE1YXBCvMhO3sIPp05mRQwx0YaguRA01UIg1f8
+2025-04-04 15:34:09,759 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/928ce554-188f-4ebb-b657-6f7b034c8b41.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZDQ2NDliYjFjMjIzNmE2ZSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.yO8HieE1YXBCvMhO3sIPp05mRQwx0YaguRA01UIg1f8
+2025-04-04 15:34:11,184 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743777249.mp4
+2025-04-04 15:34:11,188 - agents.video_gen - INFO - Successfully generated clip 3
+2025-04-04 15:34:11,190 - agents.video_gen - INFO - Generating clip 4/7
+2025-04-04 15:34:12,284 - agents.video_gen - INFO - OpenAI selected image: Yona_guitar_with_crowd.png
+2025-04-04 15:34:12,288 - agents.video_gen - INFO - Using image: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:34:12,293 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:34:12,295 - agents.video_gen - INFO - Generating Runway clip with prompt: Highlight city's energy and character...
+2025-04-04 15:34:12,656 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:34:12,659 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:34:12,663 - agents.video_gen - INFO - Loading image from local file: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:34:12,670 - agents.video_gen - INFO - Converted local image to data URI (length: 1556126)
+2025-04-04 15:34:25,237 - agents.video_gen - INFO - RunwayML task created with ID: 73715c31-63c7-49d1-9993-222b4ab83c54
+2025-04-04 15:34:35,599 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:34:45,955 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:34:56,308 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:35:06,672 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:35:17,038 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:35:27,390 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:35:37,753 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:35:37,756 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:35:37,766 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:35:37,773 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/e789cd17-d3a9-459f-acae-23308c6607d7.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMTlmMmYzOTNiN2VlY2QwNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.vzFSFtzOIPbtFOK7zQ8uiOw8unic4ZnmlGvM5D7JLMs
+2025-04-04 15:35:37,775 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/e789cd17-d3a9-459f-acae-23308c6607d7.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMTlmMmYzOTNiN2VlY2QwNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.vzFSFtzOIPbtFOK7zQ8uiOw8unic4ZnmlGvM5D7JLMs
+2025-04-04 15:35:37,778 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/e789cd17-d3a9-459f-acae-23308c6607d7.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMTlmMmYzOTNiN2VlY2QwNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.vzFSFtzOIPbtFOK7zQ8uiOw8unic4ZnmlGvM5D7JLMs
+2025-04-04 15:35:39,775 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743777337.mp4
+2025-04-04 15:35:39,778 - agents.video_gen - INFO - Successfully generated clip 4
+2025-04-04 15:35:39,779 - agents.video_gen - INFO - Generating clip 5/7
+2025-04-04 15:35:40,625 - agents.video_gen - INFO - OpenAI selected image: Yona_guitar_neon.png
+2025-04-04 15:35:40,628 - agents.video_gen - INFO - Using image: data/images\Yona_guitar_neon.png
+2025-04-04 15:35:40,636 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:35:40,638 - agents.video_gen - INFO - Generating Runway clip with prompt: Follow singer's journey around the city...
+2025-04-04 15:35:41,004 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:35:41,004 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:35:41,006 - agents.video_gen - INFO - Loading image from local file: data/images\Yona_guitar_neon.png
+2025-04-04 15:35:41,012 - agents.video_gen - INFO - Converted local image to data URI (length: 1674966)
+2025-04-04 15:35:47,722 - agents.video_gen - INFO - RunwayML task created with ID: c8c074e5-7720-49a6-bcc9-c30358c6afe1
+2025-04-04 15:35:58,069 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:36:08,434 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:36:18,778 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:36:18,786 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:36:18,788 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:36:18,790 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/a3307f17-d4c0-430d-9be5-f374efe21e82.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMGVhMmIxOTkzMmIzYWY2NiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.43Xvq-3mEeQFTiLndSBeIFA1lkk9fg8N0YCms3O1UtQ
+2025-04-04 15:36:18,792 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/a3307f17-d4c0-430d-9be5-f374efe21e82.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMGVhMmIxOTkzMmIzYWY2NiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.43Xvq-3mEeQFTiLndSBeIFA1lkk9fg8N0YCms3O1UtQ
+2025-04-04 15:36:18,795 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/a3307f17-d4c0-430d-9be5-f374efe21e82.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMGVhMmIxOTkzMmIzYWY2NiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.43Xvq-3mEeQFTiLndSBeIFA1lkk9fg8N0YCms3O1UtQ
+2025-04-04 15:36:20,396 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743777378.mp4
+2025-04-04 15:36:20,399 - agents.video_gen - INFO - Successfully generated clip 5
+2025-04-04 15:36:20,401 - agents.video_gen - INFO - Generating clip 6/7
+2025-04-04 15:36:21,301 - agents.video_gen - INFO - OpenAI selected image: yona_guitar_with_crowd.png
+2025-04-04 15:36:21,308 - agents.video_gen - INFO - Using image: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:36:21,310 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:36:21,311 - agents.video_gen - INFO - Generating Runway clip with prompt: Build up to main performance...
+2025-04-04 15:36:21,669 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:36:21,671 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:36:21,676 - agents.video_gen - INFO - Loading image from local file: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:36:21,681 - agents.video_gen - INFO - Converted local image to data URI (length: 1556126)
+2025-04-04 15:36:28,281 - agents.video_gen - INFO - RunwayML task created with ID: b481bdfc-921b-4d1e-b38e-37a3467a6441
+2025-04-04 15:36:38,636 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:36:48,996 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:36:59,369 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:36:59,371 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:36:59,374 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:36:59,377 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/2573b19f-cdaa-4a3e-a0a9-8ddc467dcdc2.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiM2Q2OGQ4ODY3YmQ0ZGZkMSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.u6OncFq3P0O78Zy76Jc6u2wpmvHnIL0wbc5Xj6vWV5Y
+2025-04-04 15:36:59,381 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/2573b19f-cdaa-4a3e-a0a9-8ddc467dcdc2.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiM2Q2OGQ4ODY3YmQ0ZGZkMSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.u6OncFq3P0O78Zy76Jc6u2wpmvHnIL0wbc5Xj6vWV5Y
+2025-04-04 15:36:59,384 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/2573b19f-cdaa-4a3e-a0a9-8ddc467dcdc2.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiM2Q2OGQ4ODY3YmQ0ZGZkMSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.u6OncFq3P0O78Zy76Jc6u2wpmvHnIL0wbc5Xj6vWV5Y
+2025-04-04 15:37:00,851 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743777419.mp4
+2025-04-04 15:37:00,855 - agents.video_gen - INFO - Successfully generated clip 6
+2025-04-04 15:37:00,858 - agents.video_gen - INFO - Generating clip 7/7
+2025-04-04 15:37:01,683 - agents.video_gen - INFO - OpenAI selected image: yona_guitar_with_crowd.png
+2025-04-04 15:37:01,688 - agents.video_gen - INFO - Using image: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:37:01,695 - utils.security - INFO - Rate limit check for video_gen_runway: allowed
+2025-04-04 15:37:01,698 - agents.video_gen - INFO - Generating Runway clip with prompt: End with a powerful, uplifting scene...
+2025-04-04 15:37:02,060 - agents.video_gen - INFO - Creating video with RunwayML SDK...
+2025-04-04 15:37:02,062 - agents.video_gen - INFO - Using correct parameter names from SDK documentation...
+2025-04-04 15:37:02,066 - agents.video_gen - INFO - Loading image from local file: data/images\yona_guitar_with_crowd.png
+2025-04-04 15:37:02,072 - agents.video_gen - INFO - Converted local image to data URI (length: 1556126)
+2025-04-04 15:37:08,737 - agents.video_gen - INFO - RunwayML task created with ID: 9bae837c-c2a1-47f2-96e4-6194bc8a4616
+2025-04-04 15:37:19,089 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:37:29,446 - agents.video_gen - INFO - Task status: RUNNING
+2025-04-04 15:37:39,819 - agents.video_gen - INFO - Task status: SUCCEEDED
+2025-04-04 15:37:39,822 - agents.video_gen - INFO - Extracting video URL from task response...
+2025-04-04 15:37:39,827 - agents.video_gen - INFO - Output found. Type: <class 'list'>
+2025-04-04 15:37:39,831 - agents.video_gen - INFO - Found URL in output array: https://dnznrvs05pmza.cloudfront.net/3f0ebeb8-a567-47be-b35f-ca017cc7528e.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNDZkODNmZGIxMmViN2RkMSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.9kG7MbBzRnOvMK6U7h9RWTZws0LN8rJoaVfNnAb0F1U
+2025-04-04 15:37:39,836 - agents.video_gen - INFO - Successfully extracted video URL: https://dnznrvs05pmza.cloudfront.net/3f0ebeb8-a567-47be-b35f-ca017cc7528e.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNDZkODNmZGIxMmViN2RkMSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.9kG7MbBzRnOvMK6U7h9RWTZws0LN8rJoaVfNnAb0F1U
+2025-04-04 15:37:39,842 - agents.video_gen - INFO - Downloading video from: https://dnznrvs05pmza.cloudfront.net/3f0ebeb8-a567-47be-b35f-ca017cc7528e.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNDZkODNmZGIxMmViN2RkMSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc0Mzg5NzYwMH0.9kG7MbBzRnOvMK6U7h9RWTZws0LN8rJoaVfNnAb0F1U
+2025-04-04 15:37:41,212 - agents.video_gen - INFO - Video saved to: data/raw_clips/runway_1743777459.mp4
+2025-04-04 15:37:41,217 - agents.video_gen - INFO - Successfully generated clip 7
+2025-04-04 15:37:41,434 - agents.song_poller - INFO - Updated processing record 0a177df8-d742-414a-afbb-f90b09fde787 status to processing
+2025-04-04 15:37:41,438 - agents.stitcher - INFO - Stitching 7 clips with audio: https://cdn1.suno.ai/3778a4b5-e03e-46ca-b858-7ab7875e4fbd.mp3
+2025-04-04 15:37:41,443 - agents.stitcher - INFO - Found 7 valid clips for stitching
+2025-04-04 15:37:41,444 - agents.stitcher - INFO - Downloading audio from: https://cdn1.suno.ai/3778a4b5-e03e-46ca-b858-7ab7875e4fbd.mp3
+2025-04-04 15:37:42,927 - agents.stitcher - INFO - Audio downloaded to: C:\Users\mark\AppData\Local\Temp\audio_1743777461.mp3
+2025-04-04 15:37:42,931 - agents.stitcher - INFO - Stitching video clips with FFmpeg...
+2025-04-04 15:37:42,935 - agents.stitcher - INFO - Created file list with 7 clips
+2025-04-04 15:37:42,937 - agents.stitcher - INFO - Concatenating video clips...
+2025-04-04 15:37:43,114 - agents.stitcher - INFO - Adding audio track...
+2025-04-04 15:37:44,476 - agents.stitcher - INFO - Video stitching complete
+2025-04-04 15:37:44,488 - agents.stitcher - INFO - Successfully stitched video: data/final_videos/final_1743777461.mp4
+2025-04-04 15:37:44,598 - agents.song_poller - INFO - Updated processing record 0a177df8-d742-414a-afbb-f90b09fde787 status to processing
+2025-04-04 15:37:44,606 - agents.uploader - INFO - Uploading video: data/final_videos/final_1743777461.mp4
+2025-04-04 15:37:44,610 - agents.uploader - INFO - Uploading to Supabase Storage: data/final_videos/final_1743777461.mp4
+2025-04-04 15:37:46,617 - agents.uploader - INFO - Video uploaded to Supabase: https://oeexwetwqsooikroobgm.supabase.co/storage/v1/object/public/videos/videos/1743777464_final_1743777461.mp4
+2025-04-04 15:37:46,681 - agents.song_poller - INFO - Updated song fde5f05d-1d3d-48d8-a066-1605c736c078 with video URL: https://oeexwetwqsooikroobgm.supabase.co/storage/v1/object/public/videos/videos/1743777464_final_1743777461.mp4
+2025-04-04 15:37:46,743 - agents.song_poller - INFO - Updated processing record 0a177df8-d742-414a-afbb-f90b09fde787 status to completed
+2025-04-04 15:37:46,747 - __main__ - INFO - Successfully processed song fde5f05d-1d3d-48d8-a066-1605c736c078
+2025-04-04 15:42:46,754 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 15:42:47,111 - agents.song_poller - INFO - Found 0 songs pending video generation
+2025-04-04 15:42:47,114 - __main__ - INFO - No songs pending processing. Waiting...
+2025-04-04 15:47:47,118 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 15:47:47,462 - agents.song_poller - INFO - Found 0 songs pending video generation
+2025-04-04 15:47:47,465 - __main__ - INFO - No songs pending processing. Waiting...
+2025-04-04 15:52:47,469 - __main__ - INFO - Polling for songs that need videos...
+2025-04-04 15:52:47,807 - agents.song_poller - INFO - Found 0 songs pending video generation
+2025-04-04 15:52:47,813 - __main__ - INFO - No songs pending processing. Waiting...
