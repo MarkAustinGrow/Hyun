@@ -81,8 +81,8 @@ class VideoScriptAgent:
                 }
             }]
             
-            # Construct the system and user messages
-            system_message = "You are a creative music video director. Create a detailed scene-by-scene script for a music video."
+            # Construct the system and user messages with anime focus
+            system_message = "You are a creative anime music video director. Create a detailed scene-by-scene script for an anime-style music video featuring Yona, a cartoon K-pop star."
             
             # Build a detailed user message with all available parameters
             user_message = f"Create a music video script for the song '{params.get('title')}' by {params.get('artist')}.\n\n"

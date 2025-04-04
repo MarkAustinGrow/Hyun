@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
+*.so16:49 04/04/2025
 .Python
 env/
 build/
@@ -36,3 +36,5 @@ data/final_videos/
 .vscode/
 *.swp
 *.swo".env" 
+"__pycache__/" 
+"*.pyc" 

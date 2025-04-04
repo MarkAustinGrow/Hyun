@@ -307,14 +307,34 @@ class VideoGenAgent:
                 self.logger.info(f"Converted URL image to data URI (length: {len(data_uri)})")
             
             try:
+                # Enhance the prompt with anime style keywords
+                anime_style_prompt = f"anime style, 2D cartoon animation, Japanese anime, {motion_prompt or prompt}"
+                
                 # Create a task to generate a video
-                task_response = client.image_to_video.create(
-                    model="gen3a_turbo",
-                    prompt_image=data_uri,  # Use base64 data URI
-                    prompt_text=motion_prompt or prompt,
-                    ratio="1280:768",
-                    watermark=False
-                )
+                try:
+                    # First try with negative prompt (if supported)
+                    task_response = client.image_to_video.create(
+                        model="gen3a_turbo",
+                        prompt_image=data_uri,  # Use base64 data URI
+                        prompt_text=anime_style_prompt,
+                        negative_prompt="photorealistic, realistic, 3D, live action, real people, human faces, photorealism, realism",
+                        ratio="1280:768",
+                        watermark=False
+                    )
+                except Exception as e:
+                    # If negative_prompt is not supported, fall back to just using the enhanced prompt
+                    if "negative_prompt" in str(e).lower():
+                        self.logger.info("Negative prompt not supported, using enhanced prompt only")
+                        task_response = client.image_to_video.create(
+                            model="gen3a_turbo",
+                            prompt_image=data_uri,  # Use base64 data URI
+                            prompt_text=anime_style_prompt,
+                            ratio="1280:768",
+                            watermark=False
+                        )
+                    else:
+                        # Re-raise if it's a different error
+                        raise
                 
                 # Get the task ID
                 task_id = task_response.id
