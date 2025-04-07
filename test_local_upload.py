@@ -49,7 +49,8 @@ def main():
         
         logger.info("\nTo access the video:")
         logger.info(f"1. From Windows File Explorer: {result['network_path']}")
-        logger.info(f"2. From a web browser (if Nginx is configured): {result['http_url']}")
+        logger.info(f"2. From a web browser (via Nginx): {result['http_url']}")
+        logger.info(f"3. From inside Docker container: /mnt/videos/{os.path.basename(result['network_path'])}")
         
         logger.info("\nNote: The network path is now stored directly in the video_url field in the database.")
         

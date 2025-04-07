@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: hyun-video-generator
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./temp:/app/temp
+      - samba-videos:/mnt/videos
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+    environment:
+      - VIDEO_SERVER=${VIDEO_SERVER}
+      - VIDEO_SERVER_USER=${VIDEO_SERVER_USER}
+      - VIDEO_SERVER_PASSWORD=${VIDEO_SERVER_PASSWORD}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - RUNWAYML_API_SECRET=${RUNWAYML_API_SECRET}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - KLING_ACCESS_ID=${KLING_ACCESS_ID}
+      - KLING_ACCESS_SECRET=${KLING_ACCESS_SECRET}
+    restart: unless-stopped
+    networks:
+      - hyun-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: hyun-nginx
+    volumes:
+      - samba-videos:/usr/share/nginx/html/videos:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - hyun-network
+
+networks:
+  hyun-network:
+    driver: bridge
+
+volumes:
+  samba-videos:
+    driver: local
+    driver_opts:
+      type: cifs
+      o: "username=${VIDEO_SERVER_USER},password=${VIDEO_SERVER_PASSWORD},domain=WORKGROUP,vers=3.0,uid=1000,gid=1000"
+      device: "//hyun.club/videos"

@@ -177,72 +177,29 @@ class UploaderAgent:
             else:
                 filename = f"{uuid.uuid4()}.mp4"
             
-            # Get credentials from environment variables or config
-            username = VIDEO_SERVER_USER
-            password = VIDEO_SERVER_PASSWORD
-            
-            if not password:
-                self.logger.warning("VIDEO_SERVER_PASSWORD not set, using default password")
-                password = "password"  # Default password for testing only
-            
-            # Create the network path
+            # Define paths
+            mount_path = "/mnt/videos"
+            dest_path = os.path.join(mount_path, filename)
             network_path = f"\\\\hyun.club\\videos\\{filename}"
             http_url = f"http://hyun.club/videos/{filename}"
             
-            # Create a temporary network drive mapping
-            import subprocess
-            
-            # Create a temporary directory for the copy
+            # Create temporary directory if it doesn't exist
             temp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "temp")
             os.makedirs(temp_dir, exist_ok=True)
             
-            # Copy the file to the network share directly
-            self.logger.info(f"Copying {video_path} to {network_path}")
+            # Copy the file to the mounted share
+            self.logger.info(f"Copying {video_path} to {dest_path}")
+            shutil.copy2(video_path, dest_path)
             
-            # Use the Windows net use command to connect to the share
-            drive_letter = "Z:"
-            try:
-                # First, disconnect the drive if it's already connected
-                subprocess.run(["net", "use", drive_letter, "/delete", "/y"], 
-                              stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
-                
-                # Connect to the share
-                connect_cmd = ["net", "use", drive_letter, "\\\\hyun.club\\videos", 
-                              f"/user:{username}", password]
-                result = subprocess.run(connect_cmd, stdout=subprocess.PIPE, 
-                                      stderr=subprocess.PIPE, check=True)
-                
-                # Copy the file
-                dest_path = os.path.join(drive_letter + "\\", filename)
-                shutil.copy2(video_path, dest_path)
-                
-                # Disconnect the drive
-                subprocess.run(["net", "use", drive_letter, "/delete", "/y"], 
-                              stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
-                
-                self.logger.info(f"Video uploaded successfully to {network_path}")
-                
-                # Return both network path and HTTP URL
-                result = {
-                    "network_path": network_path,
-                    "http_url": http_url
-                }
-                
-                return result
-                
-            except subprocess.CalledProcessError as e:
-                self.logger.error(f"Failed to map network drive: {e.stderr.decode('utf-8')}")
-                raise UploadError(f"Failed to map network drive: {e.stderr.decode('utf-8')}")
-            except Exception as e:
-                self.logger.error(f"Failed to upload video to hyun.club: {str(e)}")
-                raise UploadError(f"Failed to upload video to hyun.club: {str(e)}")
-            finally:
-                # Make sure to disconnect the drive in case of error
-                try:
-                    subprocess.run(["net", "use", drive_letter, "/delete", "/y"], 
-                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
-                except:
-                    pass
+            self.logger.info(f"Video uploaded successfully to {network_path}")
+            
+            # Return both network path and HTTP URL
+            result = {
+                "network_path": network_path,
+                "http_url": http_url
+            }
+            
+            return result
             
         except Exception as e:
             self.logger.error(f"Failed to upload video to hyun.club: {str(e)}")
