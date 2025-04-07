@@ -45,11 +45,13 @@ def main():
         # Display the results
         logger.info("Upload successful!")
         logger.info(f"Network path: {result['network_path']}")
-        logger.info(f"HTTP URL: {result['http_url']}")
+        logger.info(f"HTTP URL: {result['http_url']} (for reference only)")
         
         logger.info("\nTo access the video:")
         logger.info(f"1. From Windows File Explorer: {result['network_path']}")
         logger.info(f"2. From a web browser (if Nginx is configured): {result['http_url']}")
+        
+        logger.info("\nNote: The network path is now stored directly in the video_url field in the database.")
         
     except Exception as e:
         logger.error(f"Error uploading video: {str(e)}")

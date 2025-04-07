@@ -69,16 +69,15 @@ We have successfully implemented the Samba share integration for the AI Music Vi
 
 ### 4. Updated SongPollerAgent
 
-- Updated `update_video_url` method to support storing both URLs:
+- Simplified `update_video_url` method to store only the network path:
   ```python
-  def update_video_url(self, song_id: str, video_url: str, network_path: Optional[str] = None) -> None:
+  def update_video_url(self, song_id: str, video_url: str) -> None:
       """
-      Update the song with the generated video URL and optional network path.
+      Update the song with the generated video URL.
       
       Args:
           song_id: UUID of the song
-          video_url: URL to the generated video
-          network_path: Optional network path for the video (for YouTube agent)
+          video_url: URL or network path to the generated video
       """
       # Implementation details...
   ```
@@ -90,34 +89,16 @@ We have successfully implemented the Samba share integration for the AI Music Vi
   uploader_agent = UploaderAgent(upload_provider="local")  # Using local Samba share
   ```
 
-- Updated the upload logic to store both URLs:
+- Simplified the upload logic to store the network path directly in the video_url field:
   ```python
-  # For local provider, get both network path and HTTP URL
-  if uploader_agent.upload_provider == "local":
-      # Call the method directly to get both URLs
-      upload_result = uploader_agent._upload_to_local(final_video, {
-          "title": song_data.get("title"),
-          "artist": "Yona"  # Hardcode Yona as the artist
-      })
-      
-      # Update song with both URLs
-      song_poller.update_video_url(
-          song_id, 
-          upload_result["http_url"],
-          network_path=upload_result["network_path"]
-      )
-      
-      # Use HTTP URL for video_url in processing record
-      video_url = upload_result["http_url"]
-  else:
-      # For other providers, just get the HTTP URL
-      video_url = uploader_agent.upload_video(final_video, {
-          "title": song_data.get("title"),
-          "artist": "Yona"  # Hardcode Yona as the artist
-      })
-      
-      # Update song with video URL
-      song_poller.update_video_url(song_id, video_url)
+  # Upload the video and get the URL (network path for local provider)
+  video_url = uploader_agent.upload_video(final_video, {
+      "title": song_data.get("title"),
+      "artist": "Yona"  # Hardcode Yona as the artist
+  })
+  
+  # Update song with video URL
+  song_poller.update_video_url(song_id, video_url)
   ```
 
 ### 6. Added Testing Script
@@ -165,10 +146,10 @@ The implementation has been tested and is working correctly:
 
 ## Next Steps
 
-1. **Database Migration**: Add the `network_path` column to the `songs` table in the database.
-2. **YouTube Agent Integration**: Update the YouTube agent to use the network paths.
-3. **Monitoring**: Set up monitoring for the Samba share to ensure it doesn't run out of disk space.
-4. **Backup**: Set up regular backups of the videos on the Samba share.
+1. **YouTube Agent Integration**: Update the YouTube agent to use the network paths stored in the video_url field.
+2. **Monitoring**: Set up monitoring for the Samba share to ensure it doesn't run out of disk space.
+3. **Backup**: Set up regular backups of the videos on the Samba share.
+4. **HTTP Access**: Set up Nginx on the server to enable HTTP access to the videos (optional).
 
 ## Conclusion
 

@@ -84,10 +84,11 @@ print(f"HTTP URL: {result['http_url']}")
 
 ### Database Schema
 
-The database schema has been updated to store both URLs:
+We're using the existing database schema without modifications:
 
-- `video_url`: The HTTP URL for the video (for web access)
-- `network_path`: The network path for the video (for YouTube agent)
+- `video_url`: Now stores the network path (e.g., `\\hyun.club\videos\filename.mp4`) instead of an HTTP URL
+
+This simplifies the implementation and allows the YouTube agent to directly access the videos using the network path stored in the video_url field.
 
 ## Testing
 
@@ -121,21 +122,21 @@ This will install and configure Nginx to serve videos from the Samba share.
 
 ## YouTube Agent Integration
 
-The YouTube agent should be configured to access videos using the network path stored in the `network_path` field of the songs table. This allows the agent to directly access the videos without having to download them first.
+The YouTube agent should be configured to access videos using the network path stored in the `video_url` field of the songs table. This allows the agent to directly access the videos without having to download them first.
 
 Example code for the YouTube agent:
 
 ```python
-# Query for songs with network_path but no youtube_id
+# Query for songs with video_url but no youtube_id
 songs = supabase.table("songs") \
     .select("*") \
     .is_("youtube_id", "null") \
-    .not_.is_("network_path", "null") \
+    .not_.is_("video_url", "null") \
     .execute()
 
 for song in songs.data:
-    # Access the video using the network path
-    video_path = song["network_path"]  # e.g., \\hyun.club\videos\song_123.mp4
+    # Access the video using the network path stored in video_url
+    video_path = song["video_url"]  # e.g., \\hyun.club\videos\song_123.mp4
     
     # Upload to YouTube
     youtube_id = youtube_client.upload_video(

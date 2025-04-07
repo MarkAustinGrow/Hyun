@@ -54,7 +54,7 @@ class UploaderAgent:
                 return self._upload_to_s3(video_path, metadata)
             elif self.upload_provider == "local":
                 result = self._upload_to_local(video_path, metadata)
-                return result["http_url"]  # Return HTTP URL for backward compatibility
+                return result["network_path"]  # Return network path for direct access by YouTube agent
             else:
                 raise UploadError(f"Unsupported upload provider: {self.upload_provider}")
                 
@@ -177,12 +177,7 @@ class UploaderAgent:
             else:
                 filename = f"{uuid.uuid4()}.mp4"
             
-            # For production use: Upload to the remote server using SFTP
-            ssh = paramiko.SSHClient()
-            ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            
             # Get credentials from environment variables or config
-            server = VIDEO_SERVER
             username = VIDEO_SERVER_USER
             password = VIDEO_SERVER_PASSWORD
             
@@ -190,26 +185,64 @@ class UploaderAgent:
                 self.logger.warning("VIDEO_SERVER_PASSWORD not set, using default password")
                 password = "password"  # Default password for testing only
             
-            # Connect to the server
-            self.logger.info(f"Connecting to {server} to upload video")
-            ssh.connect(server, username=username, password=password)
+            # Create the network path
+            network_path = f"\\\\hyun.club\\videos\\{filename}"
+            http_url = f"http://hyun.club/videos/{filename}"
             
-            # Upload the file
-            sftp = ssh.open_sftp()
-            remote_path = f"/data/videos/{filename}"
-            self.logger.info(f"Uploading {video_path} to {remote_path}")
-            sftp.put(video_path, remote_path)
-            sftp.close()
-            ssh.close()
+            # Create a temporary network drive mapping
+            import subprocess
             
-            # Return both network path and HTTP URL
-            result = {
-                "network_path": f"\\\\hyun.club\\videos\\{filename}",
-                "http_url": f"http://hyun.club/videos/{filename}"
-            }
+            # Create a temporary directory for the copy
+            temp_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "temp")
+            os.makedirs(temp_dir, exist_ok=True)
             
-            self.logger.info(f"Video uploaded successfully to {result['network_path']}")
-            return result
+            # Copy the file to the network share directly
+            self.logger.info(f"Copying {video_path} to {network_path}")
+            
+            # Use the Windows net use command to connect to the share
+            drive_letter = "Z:"
+            try:
+                # First, disconnect the drive if it's already connected
+                subprocess.run(["net", "use", drive_letter, "/delete", "/y"], 
+                              stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
+                
+                # Connect to the share
+                connect_cmd = ["net", "use", drive_letter, "\\\\hyun.club\\videos", 
+                              f"/user:{username}", password]
+                result = subprocess.run(connect_cmd, stdout=subprocess.PIPE, 
+                                      stderr=subprocess.PIPE, check=True)
+                
+                # Copy the file
+                dest_path = os.path.join(drive_letter + "\\", filename)
+                shutil.copy2(video_path, dest_path)
+                
+                # Disconnect the drive
+                subprocess.run(["net", "use", drive_letter, "/delete", "/y"], 
+                              stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+                
+                self.logger.info(f"Video uploaded successfully to {network_path}")
+                
+                # Return both network path and HTTP URL
+                result = {
+                    "network_path": network_path,
+                    "http_url": http_url
+                }
+                
+                return result
+                
+            except subprocess.CalledProcessError as e:
+                self.logger.error(f"Failed to map network drive: {e.stderr.decode('utf-8')}")
+                raise UploadError(f"Failed to map network drive: {e.stderr.decode('utf-8')}")
+            except Exception as e:
+                self.logger.error(f"Failed to upload video to hyun.club: {str(e)}")
+                raise UploadError(f"Failed to upload video to hyun.club: {str(e)}")
+            finally:
+                # Make sure to disconnect the drive in case of error
+                try:
+                    subprocess.run(["net", "use", drive_letter, "/delete", "/y"], 
+                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False)
+                except:
+                    pass
             
         except Exception as e:
             self.logger.error(f"Failed to upload video to hyun.club: {str(e)}")
