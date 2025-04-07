@@ -20,6 +20,11 @@ YOUTUBE_CHANNEL_ID = os.environ.get("YOUTUBE_CHANNEL_ID")
 MUSICAPI_KEY = os.environ.get("MUSICAPI_KEY")
 SONOTELLER_API_KEY = os.environ.get("SONOTELLER_API_KEY")
 
+# Video server config
+VIDEO_SERVER = os.environ.get("VIDEO_SERVER", "172.236.12.109")
+VIDEO_SERVER_USER = os.environ.get("VIDEO_SERVER_USER", "videouser")
+VIDEO_SERVER_PASSWORD = os.environ.get("VIDEO_SERVER_PASSWORD")
+
 # Processing config
 MAX_RETRIES = 3
 POLLING_INTERVAL = 300  # seconds

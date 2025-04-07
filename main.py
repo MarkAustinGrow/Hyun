@@ -35,7 +35,7 @@ def process_song(song_id: str, song_data: dict) -> None:
     video_script_agent = VideoScriptAgent()
     video_gen_agent = VideoGenAgent(api_provider="runway")  # Change as needed
     stitcher_agent = StitcherAgent()
-    uploader_agent = UploaderAgent(upload_provider="supabase")  # Change as needed
+    uploader_agent = UploaderAgent(upload_provider="local")  # Using local Samba share
     
     try:
         # Create processing record
@@ -83,13 +83,36 @@ def process_song(song_id: str, song_data: dict) -> None:
         )
         
         # Upload video
-        video_url = uploader_agent.upload_video(final_video, {
-            "title": song_data.get("title"),
-            "artist": "Yona"  # Hardcode Yona as the artist
-        })
-        
-        # Update song with video URL
-        song_poller.update_video_url(song_id, video_url)
+        try:
+            # For local provider, get both network path and HTTP URL
+            if uploader_agent.upload_provider == "local":
+                # Call the method directly to get both URLs
+                upload_result = uploader_agent._upload_to_local(final_video, {
+                    "title": song_data.get("title"),
+                    "artist": "Yona"  # Hardcode Yona as the artist
+                })
+                
+                # Update song with both URLs
+                song_poller.update_video_url(
+                    song_id, 
+                    upload_result["http_url"],
+                    network_path=upload_result["network_path"]
+                )
+                
+                # Use HTTP URL for video_url in processing record
+                video_url = upload_result["http_url"]
+            else:
+                # For other providers, just get the HTTP URL
+                video_url = uploader_agent.upload_video(final_video, {
+                    "title": song_data.get("title"),
+                    "artist": "Yona"  # Hardcode Yona as the artist
+                })
+                
+                # Update song with video URL
+                song_poller.update_video_url(song_id, video_url)
+        except Exception as e:
+            logger.error(f"Error uploading video: {str(e)}")
+            raise
         
         # Update processing record
         song_poller.update_processing_status(

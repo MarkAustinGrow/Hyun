@@ -129,21 +129,29 @@ class SongPollerAgent:
             raise
     
     @retry(max_attempts=3, initial_delay=1.0)
-    def update_video_url(self, song_id: str, video_url: str) -> None:
+    def update_video_url(self, song_id: str, video_url: str, network_path: Optional[str] = None) -> None:
         """
-        Update the song with the generated video URL.
+        Update the song with the generated video URL and optional network path.
         
         Args:
             song_id: UUID of the song
             video_url: URL to the generated video
+            network_path: Optional network path for the video (for YouTube agent)
         """
         try:
+            update_data = {"video_url": video_url}
+            
+            if network_path:
+                update_data["network_path"] = network_path
+                
             self.client.table("songs") \
-                .update({"video_url": video_url}) \
+                .update(update_data) \
                 .eq("id", song_id) \
                 .execute()
                 
             self.logger.info(f"Updated song {song_id} with video URL: {video_url}")
+            if network_path:
+                self.logger.info(f"Updated song {song_id} with network path: {network_path}")
             
         except Exception as e:
             self.logger.error(f"Error updating video URL: {str(e)}")
